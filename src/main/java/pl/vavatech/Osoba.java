@@ -1,6 +1,6 @@
 package pl.vavatech;
 
-public class Osoba {
+public abstract class Osoba {
 
     private String imie, nazwisko;
     private int wiek;
