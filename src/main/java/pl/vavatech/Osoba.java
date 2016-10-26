@@ -6,7 +6,7 @@ public abstract class Osoba {
     private int wiek;
     private int waga;
     private Plec plec;
-    private int wzrost;
+    protected int wzrost;
 
 
     public Osoba(String imie, String nazwisko, int wiek, int waga, Plec plec, int wzrost) {
@@ -22,13 +22,6 @@ public abstract class Osoba {
         this.waga = waga;
     }
 
-    public Osoba(String nazwisko, int wiek, int waga) {
-        this.nazwisko = nazwisko;
-        this.wiek = wiek;
-        this.waga = waga;
-        this.imie = "Piotrek";
-    }
-
     boolean pelnoletnia() {
         return wiek >= 18;
     }
@@ -37,14 +30,7 @@ public abstract class Osoba {
         return waga;
     }
 
-    public boolean czyJestWysoka() {
-        if(plec == Plec.MĘŻCZYZNA && wzrost >= 180 || plec == Plec.KOBIETA && wzrost >= 150) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
+    public abstract boolean czyJestWysoka();
 
 }
 

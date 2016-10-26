@@ -7,13 +7,16 @@ public class Mezczyzna extends Osoba {
         super(imie, nazwisko, wiek, waga, Plec.MĘŻCZYZNA,wzrost);
     }
 
-//    public boolean czyJestWysoka() {
-//        if(wzrost >= 180) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+
+    @Override
+    public boolean czyJestWysoka() {
+        System.out.println("MEZCZ");
+        if(wzrost >= 180) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 }

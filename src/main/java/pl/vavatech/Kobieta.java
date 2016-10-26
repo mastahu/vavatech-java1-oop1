@@ -7,9 +7,11 @@ public class Kobieta extends Osoba {
         super(imie, nazwisko, wiek, waga, Plec.KOBIETA,wzrost);
     }
 
-//    public boolean czyJestWysoka() {
-//        return wzrost >= 150;
-//    }
+    @Override
+    public boolean czyJestWysoka() {
+        System.out.println("KOBIETA");
+        return wzrost >= 150;
+    }
 
 
 }
