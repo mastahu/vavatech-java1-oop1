@@ -5,12 +5,12 @@ public class Osoba {
     private String imie, nazwisko;
     private int wiek;
     private int waga;
-    private boolean czyJestMężczyzną;
+    private Plec plec;
     private int wzrost;
 
 
-    public Osoba(String imie, String nazwisko, int wiek, int waga, boolean czyJestMężczyzną, int wzrost) {
-        this.czyJestMężczyzną = czyJestMężczyzną;
+    public Osoba(String imie, String nazwisko, int wiek, int waga, Plec plec, int wzrost) {
+        this.plec = plec;
         this.wzrost = wzrost;
         if (imie != null) {
             this.imie = imie;
@@ -38,7 +38,7 @@ public class Osoba {
     }
 
     public boolean czyJestWysoka() {
-        if(czyJestMężczyzną && wzrost >= 180 || !czyJestMężczyzną && wzrost >= 150) {
+        if(plec == Plec.MĘŻCZYZNA && wzrost >= 180 || plec == Plec.KOBIETA && wzrost >= 150) {
             return true;
         } else {
             return false;
