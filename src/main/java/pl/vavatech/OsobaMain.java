@@ -13,14 +13,13 @@ public class OsobaMain {
         tato.nazwisko = "Kowalski";
         tato.wiek = 35;
         tato.waga = 150;
-        
+
         Osoba mama = new Osoba();
         mama.imie = "Barbara";
         mama.nazwisko = "Kowalska";
         mama.wiek = 35;
         mama.waga = 40;
-        
-        
+
 
         Osoba corka = new Osoba();
         corka.imie = "Alicja";
@@ -36,25 +35,32 @@ public class OsobaMain {
 
         System.out.println(tato.pelnoletnia()); // true
         System.out.println(corka.pelnoletnia()); // false
-        
-        Rodzina kowalscy = new Rodzina();
-        Rodzina nowakowie = new Rodzina();
-        kowalscy.tata = tato;
-        kowalscy.mama = mama;
+
 
         ArrayList<Osoba> dzieci = new ArrayList<>();
         dzieci.add(corka);
         dzieci.add(syn);
-//        kowalscy.dziecko = corka;
-//        kowalscy.dziecko = syn;
-        kowalscy.dzieci = dzieci;
 
-        int łacznaWagaRodziny = kowalscy.lacznaWaga();
-        System.out.println("Rodzina wsiada do windy, obciążenie: " + łacznaWagaRodziny);
 
-        final int wagaKowalskich = ParkRozrywki.lacznaWaga(kowalscy);
+        Rodzina kowalscy;
+        try {
 
-        System.out.println("Rodzina wsiada na karuzelę, obciążenie: " + wagaKowalskich);
+            kowalscy = new Rodzina(null, tato, dzieci);
+
+
+            //  Rodzina nowakowie = new Rodzina();
+
+
+            int łacznaWagaRodziny = kowalscy.lacznaWaga();
+            System.out.println("Rodzina wsiada do windy, obciążenie: " + łacznaWagaRodziny);
+
+            final int wagaKowalskich = ParkRozrywki.lacznaWaga(kowalscy);
+
+            System.out.println("Rodzina wsiada na karuzelę, obciążenie: " + wagaKowalskich);
+
+        } catch (NullPointerException exception) {
+
+        }
     }
 
 
