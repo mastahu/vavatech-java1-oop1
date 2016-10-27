@@ -14,5 +14,9 @@ public class Kobieta extends Osoba {
     }
 
 
+    public static void costam() {
+        System.out.println("a moze mezczyzna");
+    }
+
 }
 

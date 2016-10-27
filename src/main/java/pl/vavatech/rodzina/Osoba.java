@@ -32,5 +32,10 @@ public abstract class Osoba {
 
     public abstract boolean czyJestWysoka();
 
+
+
+    public static void costam() {
+        System.out.println("costam");
+    }
 }
 
