@@ -1,4 +1,4 @@
-package pl.vavatech;
+package pl.vavatech.rodzina;
 
 public class Kobieta extends Osoba {
 

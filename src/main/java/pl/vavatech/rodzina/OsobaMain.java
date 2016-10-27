@@ -1,4 +1,4 @@
-package pl.vavatech;
+package pl.vavatech.rodzina;
 
 import java.util.ArrayList;
 
@@ -40,6 +40,10 @@ public class OsobaMain {
         } catch (NullPointerException exception) {
             System.out.println("OOOOO : "+ exception);
         }
+
+
+
+        System.out.println(mama.pelnoletnia());
     }
 
 
