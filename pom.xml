@@ -3,6 +3,11 @@
   <groupId>pl.vavatech.java</groupId>
   <artifactId>example-oop-1</artifactId>
   <version>1</version>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
